@@ -2,24 +2,14 @@
 // ESModulo => import/export
 
 import http from "node:http";
-import buffer from "node:buffer";
+import {json} from "./middlewares/json.js";
 
 const users = []
 
 const server = http.createServer(async (req, res) => {
     const method = req.method;
 
-    const buffers = [];
-
-    for await (const chunk of req) {
-        buffers.push(chunk);
-    }
-
-    try {
-        req.body = JSON.parse(Buffer.concat(buffers).toString());
-    } catch {
-        req.body = {};
-    }
+    await json(req, res)
 
     if (method === "GET" && req.url === "/users") {
         return res.setHeader("Content-Type", "application/json").end(JSON.stringify(users));

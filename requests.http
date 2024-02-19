@@ -2,7 +2,6 @@
 
 # @name Get all users
 GET  {{url}}/users
-
 ###
 
 # @name Create a new user
@@ -13,5 +12,4 @@ Content-Type: application/json
   "name": "John Doe",
   "email": "johndoe@email.com"
 }
-
 ###
