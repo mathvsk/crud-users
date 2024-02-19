@@ -1,3 +1,17 @@
 @url= http://localhost:3333
 
-GET  {{url}}
+# @name Get all users
+GET  {{url}}/users
+
+###
+
+# @name Create a new user
+POST  {{url}}/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@email.com"
+}
+
+###
