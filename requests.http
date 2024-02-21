@@ -9,8 +9,18 @@ POST  {{url}}/users
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "johndoe@email.com"
+  "name": "Matheus Viscki",
+  "email": "example1@email.com"
+}
+###
+
+# @name Put a user
+PUT {{url}}/users/f819c9fa-6fca-49c8-9020-e99fcde788f9
+Content-Type: application/json
+
+{
+  "name": "Matheus Igor",
+  "email": "example2@email.com"
 }
 ###
 
