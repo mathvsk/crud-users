@@ -13,3 +13,7 @@ Content-Type: application/json
   "email": "johndoe@email.com"
 }
 ###
+
+# @name Delete a user
+DELETE  {{url}}/users/691fa7cc-2266-41c1-9b63-d3e4c728c720
+###
