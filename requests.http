@@ -4,18 +4,22 @@
 GET  {{url}}/users
 ###
 
+# @name Get user with filter
+GET  {{url}}/users?search=Matheus
+###
+
 # @name Create a new user
 POST  {{url}}/users
 Content-Type: application/json
 
 {
-  "name": "Matheus Viscki",
+  "name": "João",
   "email": "example1@email.com"
 }
 ###
 
 # @name Put a user
-PUT {{url}}/users/f819c9fa-6fca-49c8-9020-e99fcde788f9
+PUT {{url}}/users/8531a35e-e546-4b24-b14c-2df1a1fa5089
 Content-Type: application/json
 
 {
@@ -25,5 +29,5 @@ Content-Type: application/json
 ###
 
 # @name Delete a user
-DELETE  {{url}}/users/691fa7cc-2266-41c1-9b63-d3e4c728c720
+DELETE  {{url}}/users/8531a35e-e546-4b24-b14c-2df1a1fa5089
 ###
